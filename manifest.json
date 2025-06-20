@@ -1,6 +1,6 @@
 {
     "manifest_version": 3,
-    "name": "Next Button Clicker",
+    "name": "W3 Schools",
     "version": "1.0",
     "description": "Automatically clicks Next buttons until none are found",
     "permissions": ["activeTab", "scripting", "storage"],
