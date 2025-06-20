@@ -3,7 +3,10 @@
     "name": "W3 Schools",
     "version": "1.0",
     "description": "Automatically clicks Next buttons until none are found",
-    "permissions": ["activeTab", "scripting", "storage"],
+    "host_permissions": [
+      "https://*/*",
+      "http://*/*"
+    ],
     "action": {
       "default_popup": "popup/popup.html",
       "default_icon": {
