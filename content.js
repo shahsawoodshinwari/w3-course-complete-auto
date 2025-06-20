@@ -22,11 +22,12 @@ function startClicking() {
   isClicking = true;
   
   clickingInterval = setInterval(() => {
-    const buttons = document.querySelectorAll('a.btn.btn-secondary[href*="/mod/book/view.php"]');
+    const buttons = document.querySelectorAll('.nextprev w3-right');
     const nextButton = Array.from(buttons).reverse().find(button => button.textContent.trim() === "Next");
     
     if (nextButton) {
       console.log("Clicking Next button");
+      nextButton.scrollIntoView();
       nextButton.click();
     } else {
       console.log("Next button not found - stopping");
