@@ -1,3 +1,9 @@
+if (window.hasRunW3AutoClicker) {
+  // Already injected, do nothing
+  return;
+}
+window.hasRunW3AutoClicker = true;
+
 let clickingInterval;
 let isClicking = false;
 
