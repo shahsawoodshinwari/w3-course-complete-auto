@@ -1,17 +1,9 @@
 {
     "manifest_version": 3,
-    "name": "W3 Schools",
+    "name": "Next Button Clicker",
     "version": "1.0",
     "description": "Automatically clicks Next buttons until none are found",
-    "permissions": [
-      "activeTab",
-      "scripting",
-      "storage"
-    ],
-    "host_permissions": [
-      "https://*/*",
-      "http://*/*"
-    ],
+    "permissions": ["activeTab", "scripting", "storage"],
     "action": {
       "default_popup": "popup/popup.html",
       "default_icon": {
@@ -25,7 +17,7 @@
     },
     "content_scripts": [
       {
-        "matches": ["https://*.w3schools.com/*", "https://w3schools.com/*"],
+        "matches": ["https://my.uopeople.edu/*"],
         "js": ["content.js"]
       }
     ]

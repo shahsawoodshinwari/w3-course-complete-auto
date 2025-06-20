@@ -1,9 +1,3 @@
-if (window.hasRunW3AutoClicker) {
-  // Already injected, do nothing
-  return;
-}
-window.hasRunW3AutoClicker = true;
-
 let clickingInterval;
 let isClicking = false;
 
@@ -28,12 +22,11 @@ function startClicking() {
   isClicking = true;
   
   clickingInterval = setInterval(() => {
-    const buttons = document.querySelectorAll('.nextprev w3-right');
+    const buttons = document.querySelectorAll('a.btn.btn-secondary[href*="/mod/book/view.php"]');
     const nextButton = Array.from(buttons).reverse().find(button => button.textContent.trim() === "Next");
     
     if (nextButton) {
       console.log("Clicking Next button");
-      nextButton.scrollIntoView();
       nextButton.click();
     } else {
       console.log("Next button not found - stopping");
